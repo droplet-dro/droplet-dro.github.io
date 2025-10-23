@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2025 | Hexo</title>
+  <!-- <title>Archives: 2025 | Dro</title> -->
+  <title>Dro | Sharing is a matter of life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2025/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:title" content="Dro">
+<meta property="og:url" content="https://droplet-dro.github.io/archives/2025/index.html">
+<meta property="og:site_name" content="Dro">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Dro">
+<meta property="article:tag" content="Dro, Droplet, AI &amp; Data, Technology, Philiosophy, Finance, Leisure, Books">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Dro" type="application/atom+xml">
   
   <link rel="icon" href="/css/images/favicon.ico">
   
@@ -54,10 +56,32 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -227,19 +251,7 @@
    			<li><a target="_blank" rel="noopener" href="https://github.com/droplet-dro" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
 
    		
-   			<li><a href="" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
+   			<li><a target="_blank" rel="noopener" href="https://www.youtube.com/c/DropletDro" title="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li> 
 
    		
    		</ul>
@@ -298,6 +310,13 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
 
   
     
@@ -352,35 +371,32 @@
   
 
   <div class="clearfix container">
-      <div class="site-info">
-	      &copy; 2025 Hexo All Rights Reserved.
-        
-            <span id="busuanzi_container_site_uv">
-              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
-              本站总访问量<span id="busuanzi_value_site_pv"></span>次
-            </span>
-          
-      </div>
-      <div class="site-credit">
-        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
-      </div>
+    <div class="site-info">   
+      
+        <span id="busuanzi_container_site_uv">
+          Number of visitors<span id="busuanzi_value_site_uv"></span>
+          | Total visits<span id="busuanzi_value_site_pv"></span>
+        </span>
+      
+    </div>
+    <div class="site-credit">
+      &copy; 2025 Dro - All Rights Reserved.
+    </div>
   </div>
 </footer>
 
-
-<!-- min height -->
-
 <script>
-    var wrapdiv = document.getElementById("wrap");
-    var contentdiv = document.getElementById("content");
-
-    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-
-
-    <!-- headerblur min height -->
-    
-    
+  var wrapdiv = document.getElementById("wrap");
+  var contentdiv = document.getElementById("content");
+  
+  // Calculate minimum heights
+  wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+  contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+  
+  
+    var headerblur = document.getElementById("header-blur");
+    headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
+  
 </script>
     
 <div style="display: none;">
